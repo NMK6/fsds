@@ -1,0 +1,48 @@
+{
+  "name": "fsds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webback --mod production",
+    "lint": "eslint ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fsds"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "cssnano": "^5.0.7",
+    "file-loader": "^6.2.0",
+    "html-webpack-injector": "^1.1.4",
+    "html-webpack-plugin": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0",
+    "trim-newlines": "^4.0.2",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
+}
