@@ -23,20 +23,20 @@ module.exports = () => {
     mode: 'production',
     //change for prod
     devtool: 'eval-cheap-module-source-map',
-    devServer: {
-      contentBase: path.join(__dirname, '/'),
-      compress: false,
+    // devServer: {
+    //   contentBase: path.join(__dirname, '/'),
+    //   compress: false,
 
-      hot: true,
-      port: 9000,
-    },
-    resolve: {
-      fallback: {
-        os: false,
-        path: false,
-        fs: false,
-      },
-    },
+    //   hot: true,
+    //   port: 9000,
+    // },
+    // resolve: {
+    //   fallback: {
+    //     os: false,
+    //     // path: false,
+    //     // fs: false,
+    //   },
+    // },
     module: {
       rules: [
         {
@@ -88,6 +88,7 @@ module.exports = () => {
                 },
               },
             },
+
             'sass-loader',
           ],
         },
@@ -104,15 +105,20 @@ module.exports = () => {
         },
 
         {
-          test: /\.woff2$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'fonts/[name].[ext]',
-              },
-            },
-          ],
+          test: /\.(ttf|woff|woff2)$/,
+          type: 'asset/resource',
+          // use: [
+          //   {
+          //     loader: 'file-loader',
+
+          //     options: {
+          //       name: '[name].[ext]',
+          //       publicPath: '/src/fonts/',
+          //       outputPath: '/static/fonts/',
+          //       esModule: false,
+          //     },
+          //   },
+          // ],
         },
       ],
     },
