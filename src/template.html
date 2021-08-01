@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="icon" href="./src/img/favicon.svg" width="16" />
+    <link
+      class="preload-styles"
+      rel="preload"
+      href="./css/main.179.css"
+      as="style"
+    />
+    <link rel="preload" href="./js/bundle.js" as="script" />
   </head>
   <body>
     <div class="root"></div>

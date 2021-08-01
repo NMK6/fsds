@@ -16,4 +16,6 @@ export function addMarkup(arr) {
     'home__half map',
     container
   );
+  const containers = [firstHalf, secondHalf];
+  return containers;
 }
