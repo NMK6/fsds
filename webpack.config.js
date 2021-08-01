@@ -105,20 +105,8 @@ module.exports = () => {
         },
 
         {
-          test: /\.(ttf|woff|woff2)$/,
+          test: /\.woff2$/,
           type: 'asset/resource',
-          // use: [
-          //   {
-          //     loader: 'file-loader',
-
-          //     options: {
-          //       name: '[name].[ext]',
-          //       publicPath: '/src/fonts/',
-          //       outputPath: '/static/fonts/',
-          //       esModule: false,
-          //     },
-          //   },
-          // ],
         },
       ],
     },
