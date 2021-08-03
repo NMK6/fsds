@@ -1,7 +1,5 @@
-import { home } from './../models/Home';
 import * as homeView from './../views/homeView';
-export function renderHome(home) {
+export function renderHome() {
   const containers = homeView.addMarkup();
-  console.log(containers);
   return containers;
 }

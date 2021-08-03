@@ -1,17 +1,13 @@
 import { elements } from './base';
-import * as utilsCreating from './utilsCreating';
-export function addMarkup(arr) {
-  const container = utilsCreating.createNewElement(
-    'div',
-    'home',
-    elements.root
-  );
-  const firstHalf = utilsCreating.createNewElement(
+import * as utils from './utils';
+export function addMarkup() {
+  const container = utils.createNewElement('div', 'home', elements.root);
+  const firstHalf = utils.createNewElement(
     'section',
     'home__half main',
     container
   );
-  const secondHalf = utilsCreating.createNewElement(
+  const secondHalf = utils.createNewElement(
     'section',
     'home__half map',
     container

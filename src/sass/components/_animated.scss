@@ -1,0 +1,16 @@
+.appear {
+  display: inline-block;
+  animation-name: come-from-right;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  transition: all 0.5s ease;
+}
+.disappear {
+  position: absolute;
+  display: inline-block;
+  animation-name: disappear-to-left;
+  animation-duration: 0.08s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  transition: all 1s ease;
+}
