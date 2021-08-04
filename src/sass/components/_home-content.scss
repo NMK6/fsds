@@ -1,6 +1,6 @@
 .main {
   @include displayFlex;
-  padding-left: 4rem;
+  padding-left: 7.5rem;
   height: 100vh;
   &__content-container {
     @include displayFlex;
@@ -8,19 +8,45 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+
     height: 100%;
+  }
+  &__title-container {
+    position: relative;
   }
   &__title {
     margin: 0;
     position: relative;
+    display: inline;
+  }
+  &__img-container {
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-name: come-from-left;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+  &__img {
+    position: absolute;
+    top: -4rem;
+    left: -3.5rem;
   }
   &__p {
     margin-top: 0.2rem;
     margin-bottom: 2.5rem;
+    opacity: 0;
   }
   &__button {
     background-color: $red-color;
     padding: 1rem 2rem;
     border: none;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    animation-name: come-from-right-behind;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 15s;
   }
 }

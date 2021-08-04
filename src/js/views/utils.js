@@ -11,31 +11,38 @@ export function createNewElement(el, newClass, parent, ...arg) {
   }
   return newElement;
 }
-
+export function createSvg(newClass, parent, newAlt, newLink) {
+  const svgI = document.createElement('img');
+  svgI.alt = newAlt;
+  svgI.href = newLink;
+  svgI.className = newClass;
+  parent.appendChild(svgI);
+}
 //looping
 export function loopForEach(arr, element, crEl, newClass) {
   const l = arr.length;
 
   arr.forEach((el, key) => {
-    const count3 = l * 3200 * (key * 0.2);
+    const newWordAppearAfter = l * 1000 * key;
     const word = el.split('');
     const wL = word.length;
     setTimeout(() => {
       word.forEach((elem, k) => {
-        const count1 = 200 * k;
+        const newLetterAppearAfter = 200 * k;
         setTimeout(() => {
           const span = createNewElement(crEl, el, element);
           span.classList.add(newClass);
           span.textContent += elem;
-        }, count1);
+        }, newLetterAppearAfter);
       });
-      const count2 = wL * 250;
+      const addFadeClassAfter = wL * 250;
 
       setTimeout(() => {
         const spans = document.querySelectorAll(`.${el}`);
 
         spans.forEach((span, k) => {
-          const count4 = 11000 * k * wL * l * wL;
+          const newLetterDisappearAfter = 110 * k;
+          const removingLettersFromDom = 25 * k * k * wL * l * wL;
           setTimeout(() => {
             span.classList.contains(el) == true && k != 0
               ? span.classList.add('disappear')
@@ -43,10 +50,10 @@ export function loopForEach(arr, element, crEl, newClass) {
             setTimeout(() => {
               const disappearSpans = document.querySelectorAll('.disappear');
               disappearSpans.forEach((el) => el.remove());
-            }, count4);
-          }, 110 * k);
+            }, removingLettersFromDom);
+          }, newLetterDisappearAfter);
         });
-      }, count2);
-    }, count3);
+      }, addFadeClassAfter);
+    }, newWordAppearAfter);
   });
 }

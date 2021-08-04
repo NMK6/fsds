@@ -94,14 +94,16 @@ module.exports = () => {
         },
         {
           test: /\.(png|jpg|gif|svg|jpeg)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: `img/[name].[ext]`,
-              },
-            },
-          ],
+          // use: [
+          //   {
+          //     loader: 'file-loader',
+          //     options: {
+          //       name: `img/[name].[ext]`,
+          //       esModule: false,
+          //     },
+          //   },
+          // ],
+          type: 'asset/resource',
         },
 
         {
@@ -118,8 +120,8 @@ module.exports = () => {
       new HtmlWebpackInjector(),
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: 'css/[name].[id].css',
-        chunkFilename: 'css/[name].[id].css',
+        filename: 'css/[name].css',
+        chunkFilename: 'css/[name].css',
       }),
       new ImageminWebpack({
         plugins: [

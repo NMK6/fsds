@@ -26,16 +26,18 @@ h1,
 h2,
 h3 {
   font-family: 'aclonicaregular';
+  font-weight: 300;
 }
 .main {
   &__title {
     color: $blue-color;
     font-size: 4rem;
-    font-weight: 300;
+
     line-height: 1.4;
   }
   &__p {
     font-size: 1.4rem;
+    color: $blue-color;
   }
   &__button {
     font-size: 1.4rem;
