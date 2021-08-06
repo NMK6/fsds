@@ -1,5 +1,6 @@
 #line1,
-#line4,
+#line3,
+#line5,
 #line7 {
   fill: $blue-color;
   opacity: 0;
@@ -12,7 +13,8 @@
   transition: all 2s ease-in-out;
 }
 #line2,
-#line5 {
+#line4,
+#line6 {
   fill: $red-color;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -25,29 +27,13 @@
     fill: transparent;
   }
 }
-#line3,
-#line6 {
-  fill: $white-color;
-  opacity: 0;
-  animation-fill-mode: forwards;
 
-  animation-name: change-opacity;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-
-  &:hover {
-    fill: transparent;
-  }
-}
 #line2 {
   animation-delay: 12s;
 }
-#line3 {
+#line4 {
   animation-delay: 13s;
 }
-#line5 {
-  animation-delay: 14s;
-}
 #line6 {
-  animation-delay: 15s;
+  animation-delay: 14s;
 }

@@ -11,8 +11,14 @@ export function addMarkup(arr, container) {
     'main__title-container',
     contentContainer
   );
-  const title = utils.createNewElement('h1', 'main__title', titleContainer);
-  const img = ` <div class='main__img-container'><svg class='main__img' width="40" viewBox="0 0 1046 1115" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const mainTitle = utils.createNewElement(
+    'h1',
+    'visually-hidden',
+    titleContainer,
+    arr.mainTitle
+  );
+  const title = utils.createNewElement('div', 'main__title', titleContainer);
+  const img = ` <div class='main__img-container'><svg class='main__img' width="42" viewBox="0 0 1046 1115" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g id="Group 26">
   <path id="line3" d="M1045 317H197L289 478H1045V317Z" fill="#C4C4C4" stroke="black" stroke-width="0.1"/>
   <path id="line2" d="M1045 162H97L198.571 319H1045V162Z" fill="#C4C4C4" stroke="black" stroke-width="0.1"/>
@@ -40,5 +46,5 @@ export function addMarkup(arr, container) {
     'button'
   );
 
-  utils.loopForEach(arr.title, title, 'span', 'appear');
+  utils.loopTextByLetter(arr.title, title, 'span', 'appear', 'disappear');
 }

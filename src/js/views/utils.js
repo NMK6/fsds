@@ -11,15 +11,35 @@ export function createNewElement(el, newClass, parent, ...arg) {
   }
   return newElement;
 }
-export function createSvg(newClass, parent, newAlt, newLink) {
+export function createSvg(newClass, parent, newAlt, newLink, iWidth) {
   const svgI = document.createElement('img');
   svgI.alt = newAlt;
-  svgI.href = newLink;
+  svgI.src = newLink;
   svgI.className = newClass;
+  svgI.width = iWidth;
   parent.appendChild(svgI);
 }
+export function createList(parent, newClass, arr, liClass, ...arg) {
+  const ul = document.createElement('ul');
+  ul.className = newClass;
+  parent.appendChild(ul);
+  arr.forEach((el, key) => {
+    const li = document.createElement('li');
+    li.className = liClass;
+    if (arg.length > 0) {
+      const aLink = document.createElement('a');
+      aLink.textContent = el;
+      aLink.href = arg[(0)[key]];
+      aLink.className = arg[1];
+      li.appendChild(aLink);
+    } else {
+      li.textContent = el;
+    }
+    ul.appendChild(li);
+  });
+}
 //looping
-export function loopForEach(arr, element, crEl, newClass) {
+export function loopTextByLetter(arr, element, crEl, newClass, anotherClass) {
   const l = arr.length;
 
   arr.forEach((el, key) => {
@@ -45,10 +65,12 @@ export function loopForEach(arr, element, crEl, newClass) {
           const removingLettersFromDom = 25 * k * k * wL * l * wL;
           setTimeout(() => {
             span.classList.contains(el) == true && k != 0
-              ? span.classList.add('disappear')
+              ? span.classList.add(anotherClass)
               : span.classList.add('v');
             setTimeout(() => {
-              const disappearSpans = document.querySelectorAll('.disappear');
+              const disappearSpans = document.querySelectorAll(
+                `.${anotherClass}`
+              );
               disappearSpans.forEach((el) => el.remove());
             }, removingLettersFromDom);
           }, newLetterDisappearAfter);

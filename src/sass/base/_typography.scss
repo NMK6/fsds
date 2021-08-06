@@ -21,6 +21,7 @@
 body {
   font-size: 16px;
   font-family: system-ui, 'open_sansregular';
+  line-height: 1.4;
 }
 h1,
 h2,
@@ -28,19 +29,32 @@ h3 {
   font-family: 'aclonicaregular';
   font-weight: 300;
 }
+a {
+  text-decoration: none;
+}
 .main {
   &__title {
     color: $blue-color;
     font-size: 4rem;
-
-    line-height: 1.4;
+    font-family: 'aclonicaregular';
   }
   &__p {
     font-size: 1.4rem;
     color: $blue-color;
+    font-family: inherit;
   }
   &__button {
     font-size: 1.4rem;
     color: $white-color;
+    font-family: inherit;
+    line-height: inherit;
+  }
+}
+.header {
+  &__a {
+    font-size: 1.4rem;
+    color: $blue-color;
+    padding: 1rem;
+    font-weight: inherit;
   }
 }
