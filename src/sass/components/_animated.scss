@@ -1,3 +1,11 @@
+.animated {
+  &__map {
+    animation-name: op-sc;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+}
 .appear {
   display: inline-block;
   animation-name: come-from-right;
@@ -15,7 +23,7 @@
 .appear-bottom {
   display: inline-block;
   animation-name: appear-from-bottom;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 
   animation-fill-mode: forwards;

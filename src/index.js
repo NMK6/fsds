@@ -2,6 +2,7 @@ import './sass/main.scss';
 import { renderHome } from './js/controllers/homeController';
 import { renderHomeContent } from './js/controllers/homeContentController';
 import { renderHeader } from './js/controllers/headerController';
+import { renderMap } from './js/controllers/mapController';
 function render() {
   window.addEventListener('DOMContentLoaded', (e) => {
     function renderEl() {
@@ -13,11 +14,12 @@ function render() {
 
     renderEl()
       .then(function () {
-        const containers = renderHome();
-        renderHomeContent(containers[0]);
+        renderHeader();
       })
       .then(function () {
-        renderHeader();
+        const containers = renderHome();
+        renderHomeContent(containers[0]);
+        renderMap(containers[1]);
       })
 
       .catch();

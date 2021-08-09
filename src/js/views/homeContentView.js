@@ -1,5 +1,4 @@
 import * as utils from './utils';
-import image from './../../img/lines.svg';
 export function addMarkup(arr, container) {
   const contentContainer = utils.createNewElement(
     'div',

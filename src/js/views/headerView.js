@@ -18,5 +18,5 @@ export function addMarkup(arr) {
     arr.links,
     'header__a'
   );
-  const logo = utils.createSvg('header__logo', header, 'logo', arr.myLogo, 80);
+  const logo = utils.createSvg('header__logo', header, 'logo', arr.myLogo, 90);
 }

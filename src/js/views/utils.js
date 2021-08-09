@@ -38,6 +38,14 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
     ul.appendChild(li);
   });
 }
+//removing
+export function removeChildren(parent) {
+  if (parent && parent.firstChild) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+}
 //looping
 export function loopTextByLetter(arr, element, crEl, newClass, anotherClass) {
   const l = arr.length;
@@ -79,3 +87,46 @@ export function loopTextByLetter(arr, element, crEl, newClass, anotherClass) {
     }, newWordAppearAfter);
   });
 }
+
+export function loopIds(arr, countryColor, countryStroke) {
+  arr.forEach((el, key) => {
+    setTimeout(() => {
+      const countryId = document.querySelector(`#${el}`);
+      countryId.classList.add('animated__map');
+      countryId.style.fill = countryColor[key];
+      countryId.style.stroke = countryStroke;
+    }, key * 400);
+  });
+}
+export function loopPaths(pathsArr, pathsColor, pathsStroke) {
+  pathsArr.forEach((el, key) => {
+    setTimeout(() => {
+      const pathsItem = document.querySelector(`#${el}`);
+      pathsItem.style.fill = pathsColor;
+      pathsItem.style.stroke = pathsStroke;
+      pathsItem.style.opacity = 1;
+    }, 200 * key);
+  });
+  setTimeout(() => {
+    pathsArr.forEach((el, key) => {
+      setTimeout(() => {
+        const pathsItem = document.querySelector(`#${el}`);
+        pathsItem.style.fill = '';
+        pathsItem.style.stroke = '';
+
+        pathsItem.style.opacity = 0;
+      }, 200 * key);
+    });
+  }, 3000);
+}
+
+export const managePathsLooping = (paths, pathsColor, pathsStroke) => {
+  setInterval(() => {
+    loopPaths(paths, pathsColor, pathsStroke);
+
+    setTimeout(() => {
+      const reversePaths = paths.reverse();
+      loopPaths(reversePaths, pathsColor, pathsStroke);
+    }, 9000);
+  }, 12000);
+};

@@ -54,7 +54,10 @@ a {
   &__a {
     font-size: 1.4rem;
     color: $blue-color;
-    padding: 1rem;
     font-weight: inherit;
   }
+}
+.map__country-p {
+  color: $blue-color;
+  font-size: 1.1rem;
 }

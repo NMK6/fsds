@@ -1,42 +1,78 @@
-#denmark {
-}
-#iceland {
-}
-#ireland {
-}
-#united-kingdom {
-}
-#united-kingdom-1 {
-}
-#norway {
-}
-#corsica {
-}
-#sardinia {
-}
-#tunisia {
-}
-#morocco {
-}
-#algeria {
-}
-#greece {
-}
-#turkey {
-}
-#macedonia {
-}
-#albania {
-}
-#montenegro {
-}
-#bosnia-and-herzogovina {
-}
-#croatia {
-}
-#slovenia {
-}
+.map {
+  &__container {
+    width: 100%;
 
+    @include display-flex;
+    justify-content: flex-end;
+  }
+  &__country-container {
+    width: 17rem;
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    @include display-flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  &__country-content {
+    width: 100%;
+    @include display-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 3rem;
+    background-color: $light-primary;
+    transition: all 1s ease;
+  }
+  &__country-title {
+    padding-bottom: 0.7rem;
+  }
+  &__country-p:last-child {
+    padding-top: 0.4rem;
+  }
+}
+#poland,
+#norway,
+#sweden,
+#germany,
+#finland,
+#united-kingdom,
+#united-kingdom-1,
+#france,
+#spain,
+#portugal,
+#italy,
+#ireland,
+#belgium,
+#switzerland,
+#czech-republic,
+#austria,
+#denmark,
+#slovenia,
+#netherlands,
+#russia,
+#lithuania,
+#belarus,
+#ukraine,
+#slovakia,
+#hungary,
+#luxemburg,
+#latvia,
+#estonia,
+#bulgaria,
+#romania,
+#moldova,
+#turkey,
+#greece,
+#macedonia,
+#serbia,
+#albania,
+#morocco,
+#algeria,
+#tunisia,
+#croatia,
+#bosnia-and-herzegovina,
+#kosovo,
+#montenegro,
 #path1,
 #path2,
 #path3,
@@ -48,4 +84,38 @@
 #path9,
 #path10,
 #path11 {
+  fill: transparent;
+  opacity: 0;
+  transition: 2s all ease;
+}
+#uk-n-1,
+#uk-n-2,
+#uk-n-3,
+#uk-n-4,
+#uk-n-5,
+#uk-n-6,
+#n-g-1,
+#n-g-2,
+#n-g-3,
+#n-g-4,
+#g-p-1,
+#g-p-2,
+#g-p-3,
+#g-p-4,
+#g-p-5,
+#g-p-6,
+#g-p-7,
+#p-l-1,
+#p-l-2,
+#p-l-3,
+#p-l-4,
+#p-l-5,
+#p-l-6,
+#p-l-7,
+#l-l-1,
+#l-l-2,
+#l-l-3,
+#l-l-4 {
+  fill: transparent;
+  opacity: 0;
 }
