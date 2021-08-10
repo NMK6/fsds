@@ -45,5 +45,5 @@ export function addMarkup(arr, container) {
     'button'
   );
 
-  utils.loopTextByLetter(arr.title, title, 'span', 'appear', 'disappear');
+  utils.loopTextByLetter(arr.title, title, 'span', 'appear');
 }

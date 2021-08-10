@@ -68,43 +68,43 @@ export function removeChildren(parent) {
   }
 }
 //looping
-export function loopTextByLetter(arr, element, crEl, newClass, anotherClass) {
+export function loopTextByLetter(arr, element, crEl, newClass) {
   const l = arr.length;
 
   arr.forEach((el, key) => {
-    const newWordAppearAfter = l * 1000 * key;
+    const newWordAppearAfter = l * 100 * key;
     const word = el.split('');
     const wL = word.length;
     setTimeout(() => {
       word.forEach((elem, k) => {
-        const newLetterAppearAfter = 200 * k;
-        setTimeout(() => {
-          const span = createNewElement(crEl, el, element);
-          span.classList.add(newClass);
-          span.textContent += elem;
-        }, newLetterAppearAfter);
+        // const newLetterAppearAfter = 200 * k;
+        // setTimeout(() => {
+        const span = createNewElement(crEl, el, element);
+        span.classList.add(newClass);
+        span.textContent += elem;
+        // }, newLetterAppearAfter);
       });
-      const addFadeClassAfter = wL * 250;
+      // const addFadeClassAfter = wL * 250;
 
-      setTimeout(() => {
-        const spans = document.querySelectorAll(`.${el}`);
+      // setTimeout(() => {
+      //   const spans = document.querySelectorAll(`.${el}`);
 
-        spans.forEach((span, k) => {
-          const newLetterDisappearAfter = 110 * k;
-          const removingLettersFromDom = 25 * k * k * wL * l * wL;
-          setTimeout(() => {
-            span.classList.contains(el) == true && k != 0
-              ? span.classList.add(anotherClass)
-              : span.classList.add('v');
-            setTimeout(() => {
-              const disappearSpans = document.querySelectorAll(
-                `.${anotherClass}`
-              );
-              disappearSpans.forEach((el) => el.remove());
-            }, removingLettersFromDom);
-          }, newLetterDisappearAfter);
-        });
-      }, addFadeClassAfter);
+      //   spans.forEach((span, k) => {
+      //     const newLetterDisappearAfter = 110 * k;
+      //     const removingLettersFromDom = 25 * k * k * wL * l * wL;
+      //     setTimeout(() => {
+      //       span.classList.contains(el) == true && k != 0
+      //         ? span.classList.add(anotherClass)
+      //         : span.classList.add('v');
+      //       setTimeout(() => {
+      //         const disappearSpans = document.querySelectorAll(
+      //           `.${anotherClass}`
+      //         );
+      //         disappearSpans.forEach((el) => el.remove());
+      //       }, removingLettersFromDom);
+      //     }, newLetterDisappearAfter);
+      //   });
+      // }, addFadeClassAfter);
     }, newWordAppearAfter);
   });
 }

@@ -9,7 +9,7 @@
 .appear {
   display: inline-block;
   animation-name: come-from-right;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: ease;
   transition: all 0.5s ease;
 }
@@ -17,8 +17,11 @@
   display: inline-block;
   animation-name: disappear-to-left;
   animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .appear-bottom {
   display: inline-block;
