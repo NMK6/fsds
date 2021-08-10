@@ -13,6 +13,7 @@
   }
   &__ul {
     @include display-flex;
+    padding-right: 1rem;
   }
   &__li {
     padding-right: 0.5rem;
@@ -23,5 +24,17 @@
   }
   &__a {
     padding: 1rem 1rem 1rem 0;
+  }
+  &__contacts {
+    width: auto;
+    height: 1.1rem;
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__img-a {
+    padding-right: 1.3rem;
+    padding-top: 0.3rem;
   }
 }

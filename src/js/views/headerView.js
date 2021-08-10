@@ -16,7 +16,21 @@ export function addMarkup(arr) {
     arr.menu,
     'header__li',
     arr.links,
-    'header__a'
+    'header__a',
+    arr.contacts,
+    'header__contacts',
+    arr.alts,
+    15,
+    'header__img-a',
+    arr.imgLinks
   );
-  const logo = utils.createSvg('header__logo', header, 'logo', arr.myLogo, 90);
+  const logo = utils.createSvg(
+    'header__logo',
+    header,
+    'logo',
+    arr.myLogo,
+    90,
+    'header__logo-a',
+    '/'
+  );
 }

@@ -11,13 +11,29 @@ export function createNewElement(el, newClass, parent, ...arg) {
   }
   return newElement;
 }
-export function createSvg(newClass, parent, newAlt, newLink, iWidth) {
+export function createLink(parent, newLinkClass, newHref) {
+  const newLink = document.createElement('a');
+  newLink.href = newHref;
+  newLink.className = newLinkClass;
+  parent.appendChild(newLink);
+  return newLink;
+}
+export function createSvg(
+  newClass,
+  parent,
+  newAlt,
+  newLink,
+  iWidth,
+  newLinkClass,
+  newHref
+) {
+  const link = createLink(parent, newLinkClass, newHref);
   const svgI = document.createElement('img');
   svgI.alt = newAlt;
   svgI.src = newLink;
   svgI.className = newClass;
   svgI.width = iWidth;
-  parent.appendChild(svgI);
+  link.appendChild(svgI);
 }
 export function createList(parent, newClass, arr, liClass, ...arg) {
   const ul = document.createElement('ul');
@@ -37,6 +53,11 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
     }
     ul.appendChild(li);
   });
+  if (arg.length > 2) {
+    arg[2].forEach((el, key) => {
+      createSvg(arg[3], parent, arg[4][key], el, arg[5], arg[6], arg[7][key]);
+    });
+  }
 }
 //removing
 export function removeChildren(parent) {
