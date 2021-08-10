@@ -48,7 +48,7 @@ export function showPrice(e, arr) {
         const popUpTitle = `FSDS prices`;
 
         const popUpParagraph = `Country: ${arr.title[key]}`;
-        const popUpSecondParagraph = `Price from England to ${arr.title[key]}: ${arr.price[key]} per mile`;
+        const popUpSecondParagraph = `Price from England to ${arr.capitalCity[key]}: ${arr.price[key]} per mile`;
         const popUpContent = utils.createNewElement(
           'div',
           'map__country-content',

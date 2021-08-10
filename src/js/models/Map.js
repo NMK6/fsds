@@ -47,6 +47,7 @@ export const map = {
     'bosnia-and-herzegovina',
     'kosovo',
     'montenegro',
+    'russia-1',
     'path1',
     'path2',
     'path3',
@@ -59,7 +60,6 @@ export const map = {
     'path10',
     'path11',
     'sicily',
-    'russia-1',
     'corsica',
     'sardinia',
   ],
@@ -108,6 +108,7 @@ export const map = {
     'Bosnia and Herzegovina',
     'Kosovo',
     'Montenegro',
+    'Russia',
   ],
   countryColor: [
     green,
@@ -216,6 +217,7 @@ export const map = {
     'Sarajevo',
     'Pristina',
     'Podgorica',
+    'Moscow',
   ],
   price: [
     '',
