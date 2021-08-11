@@ -1,0 +1,14 @@
+.footer {
+  @include display-flex;
+
+  width: 100%;
+  height: 5rem;
+  background-color: $footer-color;
+  &__container {
+    padding-left: 7.5rem;
+    @include display-flex;
+  }
+  &__p {
+    padding-bottom: 0.5rem;
+  }
+}

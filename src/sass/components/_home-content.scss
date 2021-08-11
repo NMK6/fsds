@@ -1,14 +1,12 @@
 .main {
   @include display-flex;
   padding-left: 7.5rem;
-  height: 100vh;
   &__content-container {
     @include display-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-
     position: sticky;
     top: 50%;
     left: 7.5rem;

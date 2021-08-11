@@ -217,7 +217,7 @@ export const map = {
     'Sarajevo',
     'Pristina',
     'Podgorica',
-    'Moscow',
+    'Kaliningrad',
   ],
   price: [
     '',
@@ -296,7 +296,7 @@ export const map = {
   ],
   pathColor: '#CE2B3F',
   pathStroke: '#1a3c55',
-  image: `<svg class='map__image' width="720" height="873" viewBox="0 0 720 873" fill="none" xmlns="http://www.w3.org/2000/svg">
+  image: `<svg class='map__image' width="720" height="873" viewBox="0 -10 720 873" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g id="europe" clip-path="url(#clip0)">
   <g id="layer1">
   <g id="g2224">
