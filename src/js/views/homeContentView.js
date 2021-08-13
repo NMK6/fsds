@@ -1,5 +1,7 @@
 import * as utils from './utils';
+import { elements } from './base';
 export function addMarkup(arr, container) {
+  utils.removeChildren(container);
   const contentContainer = utils.createNewElement(
     'div',
     'main__content-container',
@@ -41,9 +43,15 @@ export function addMarkup(arr, container) {
     'button',
     'main__button',
     contentContainer,
-    arr.button,
+    '',
     'button'
   );
-
+  let buttonLink;
+  if (elements.width <= 700) {
+    buttonLink = arr.buttonMobileLink;
+  } else {
+    buttonLink = arr.buttonLink;
+  }
+  utils.createLink(button, 'main__button-a', buttonLink, arr.button);
   utils.loopTextByLetter(arr.title, title, 'span', 'appear');
 }

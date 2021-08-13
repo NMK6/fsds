@@ -43,7 +43,7 @@ export function showPrice(e, arr) {
           : utils.createNewElement(
               'div',
               'map__country-container',
-              elements.root
+              document.querySelector('.map__container')
             );
         const popUpTitle = `FSDS prices`;
 

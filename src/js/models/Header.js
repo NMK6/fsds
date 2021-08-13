@@ -4,7 +4,7 @@ import phone from './../../img/phone.svg';
 import email from './../../img/email.svg';
 export const header = {
   menu: ['Home', 'About', 'Contact'],
-  links: ['/', '/about', '/contact'],
+  links: ['', '#about', '#contact'],
   myLogo: logo,
   favicon: fav,
   contacts: [phone, email],

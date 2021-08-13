@@ -33,4 +33,5 @@ export function addMarkup(arr) {
     'header__logo-a',
     '/'
   );
+  return header;
 }

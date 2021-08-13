@@ -11,10 +11,13 @@ export function createNewElement(el, newClass, parent, ...arg) {
   }
   return newElement;
 }
-export function createLink(parent, newLinkClass, newHref) {
+export function createLink(parent, newLinkClass, newHref, ...arg) {
   const newLink = document.createElement('a');
   newLink.href = newHref;
   newLink.className = newLinkClass;
+  if (arg.length > 0) {
+    newLink.textContent = arg[0];
+  }
   parent.appendChild(newLink);
   return newLink;
 }
@@ -45,7 +48,7 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
     if (arg.length > 0) {
       const aLink = document.createElement('a');
       aLink.textContent = el;
-      aLink.href = arg[(0)[key]];
+      aLink.href = arg[0][key];
       aLink.className = arg[1];
       li.appendChild(aLink);
     } else {
