@@ -2,6 +2,11 @@ import * as utils from './utils';
 import { elements } from './base';
 export function addMarkup(arr, container) {
   utils.removeChildren(container);
+  // const blockContainer = utils.createNewElement(
+  //   'div',
+  //   'main__container',
+  //   container
+  // );
   const contentContainer = utils.createNewElement(
     'div',
     'main__content-container',

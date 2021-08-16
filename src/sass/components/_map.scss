@@ -1,7 +1,7 @@
 .map {
   &__container {
     width: 100%;
-
+    transition: all 1s ease;
     @include display-flex;
     justify-content: flex-end;
   }

@@ -1,0 +1,64 @@
+.about {
+  &__container {
+    width: 100%;
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1rem;
+
+    align-items: stretch;
+    height: auto;
+    background-position: right top;
+    background-blend-mode: lighten;
+  }
+  &__title-container {
+    width: 100%;
+    @include display-flex;
+    padding-bottom: 1.5rem;
+    padding-top: 10rem;
+    position: relative;
+  }
+  &__img-container {
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-name: come-from-left;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    position: absolute;
+  }
+  &__img {
+    position: absolute;
+    top: -1.35rem;
+    left: -2.2rem;
+    z-index: -1;
+  }
+  &__p {
+    opacity: 0;
+  }
+  &__p:not(:last-child) {
+    padding-bottom: 1rem;
+  }
+  &__background {
+    background-position: left top;
+    background-image: linear-gradient(
+        to right,
+        $primary-color 0%,
+        $primary-color 100%
+      ),
+      url(./../img/van.jpg);
+
+    background-size: 660px;
+    background-repeat: no-repeat;
+
+    transition: all 1.7s ease;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .about {
+    &__container {
+      justify-content: center;
+      padding-right: 0rem;
+    }
+  }
+}

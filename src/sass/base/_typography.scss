@@ -50,18 +50,24 @@ a {
     line-height: inherit;
   }
 }
-.header {
-  &__a {
-    font-size: 1.4rem;
-    color: $blue-color;
-    font-weight: inherit;
-  }
+.header__a,
+.about__p {
+  font-size: 1.4rem;
+  color: $blue-color;
+  font-weight: inherit;
 }
+
 .map__country-p {
   color: $blue-color;
   font-size: 1.1rem;
 }
 .footer__p {
   color: rgba($light-primary, 0.6);
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+.about__title {
+  color: $blue-color;
+  font-size: 4rem;
+  font-family: 'aclonicaregular';
+  text-transform: uppercase;
 }

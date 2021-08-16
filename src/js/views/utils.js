@@ -38,6 +38,15 @@ export function createSvg(
   svgI.width = iWidth;
   link.appendChild(svgI);
 }
+export function createParagraphs(parent, arr, newClass) {
+  arr.forEach((el) => {
+    const p = document.createElement('p');
+
+    p.className = newClass;
+    p.textContent = el;
+    parent.appendChild(p);
+  });
+}
 export function createList(parent, newClass, arr, liClass, ...arg) {
   const ul = document.createElement('ul');
   ul.className = newClass;
@@ -63,12 +72,32 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
   }
 }
 //removing
-export function removeChildren(parent) {
+export function removeChildren(parent, ...arg) {
   if (parent && parent.firstChild) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
+    const children = parent.childNodes;
+
+    children.forEach((el) => {
+      if (arg.length > 0 && el.className == arg[0]) {
+        return;
+      } else {
+        parent.removeChild(el);
+      }
+    });
+    // while (parent.firstChild) {
+    //   if(ar.length  < 0 && parent.firstChild.className != arg[0])
+    //   parent.removeChild(parent.firstChild);
+    // }
   }
+}
+export function removeScreen(parent, newClass, newSectionParentClass) {
+  addNewClass(parent.firstChild, newClass);
+  setTimeout(() => {
+    removeChildren(parent, newSectionParentClass);
+  }, 1100);
+}
+//add remove classes
+export function addNewClass(el, newClass) {
+  el.classList.add(newClass);
 }
 //looping
 export function loopTextByLetter(arr, element, crEl, newClass) {
@@ -80,38 +109,23 @@ export function loopTextByLetter(arr, element, crEl, newClass) {
     const wL = word.length;
     setTimeout(() => {
       word.forEach((elem, k) => {
-        // const newLetterAppearAfter = 200 * k;
-        // setTimeout(() => {
         const span = createNewElement(crEl, el, element);
         span.classList.add(newClass);
         span.textContent += elem;
-        // }, newLetterAppearAfter);
       });
-      // const addFadeClassAfter = wL * 250;
-
-      // setTimeout(() => {
-      //   const spans = document.querySelectorAll(`.${el}`);
-
-      //   spans.forEach((span, k) => {
-      //     const newLetterDisappearAfter = 110 * k;
-      //     const removingLettersFromDom = 25 * k * k * wL * l * wL;
-      //     setTimeout(() => {
-      //       span.classList.contains(el) == true && k != 0
-      //         ? span.classList.add(anotherClass)
-      //         : span.classList.add('v');
-      //       setTimeout(() => {
-      //         const disappearSpans = document.querySelectorAll(
-      //           `.${anotherClass}`
-      //         );
-      //         disappearSpans.forEach((el) => el.remove());
-      //       }, removingLettersFromDom);
-      //     }, newLetterDisappearAfter);
-      //   });
-      // }, addFadeClassAfter);
     }, newWordAppearAfter);
   });
 }
-
+export function loopByLetter(arr, newElement, parent, newClass) {
+  arr.forEach((el, key) => {
+    const newLetterAppearAfter = 150 * key;
+    setTimeout(() => {
+      const span = createNewElement(parent, el, newElement);
+      span.className = newClass;
+      span.textContent = el;
+    }, newLetterAppearAfter);
+  });
+}
 export function loopIds(arr, countryColor, countryStroke) {
   arr.forEach((el, key) => {
     setTimeout(() => {

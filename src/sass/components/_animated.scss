@@ -31,3 +31,16 @@
 
   animation-fill-mode: forwards;
 }
+.change-link {
+  animation-name: move-left;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.appear-from-bottom {
+  animation-name: appear-from-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+
+  animation-fill-mode: forwards;
+}
