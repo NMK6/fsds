@@ -4,7 +4,7 @@ export function addMarkup() {
   const container = utils.createNewElement('div', 'home', elements.root);
   const firstHalf = utils.createNewElement(
     'section',
-    'home__half main',
+    'home__half main about contact',
     container
   );
   const secondHalf = utils.createNewElement(

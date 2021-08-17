@@ -32,10 +32,13 @@
   animation-fill-mode: forwards;
 }
 .change-link {
-  animation-name: move-left;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
+  background-size: 20%;
+  animation-name: change-opacity-to-zero-move-left;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  transition: all 2s ease;
 }
 .appear-from-bottom {
   animation-name: appear-from-bottom;

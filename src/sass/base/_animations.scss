@@ -64,18 +64,26 @@
 @keyframes op-sc {
   0% {
     opacity: 0;
-    // transform: scale(1.5);
   }
   100% {
     opacity: 1;
-    // transform: scale(1);
   }
 }
-@keyframes move-left {
+@keyframes change-opacity-to-zero {
   0% {
-    transform: translate(0 0);
+    opacity: 1;
   }
   100% {
-    transform: translate(-900px 0);
+    opacity: 0;
+  }
+}
+@keyframes change-opacity-to-zero-move-left {
+  0% {
+    transform: translate(0 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-150px 0);
+    opacity: 0;
   }
 }

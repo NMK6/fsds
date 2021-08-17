@@ -5,7 +5,9 @@ export function removePreviousScreen(container) {
 }
 export function addMarkup(arr, container) {
   const about = utils.createNewElement('div', 'about__container', container);
-
+  setTimeout(() => {
+    utils.addNewClass(about, 'about__background');
+  }, 300);
   const titleContainer = utils.createNewElement(
     'div',
     'about__title-container',
@@ -28,10 +30,6 @@ export function addMarkup(arr, container) {
   const paragraphs = utils.createNewElement('div', 'about__p-container', about);
 
   utils.createParagraphs(paragraphs, arr.paragraphs, 'about__p');
-  setTimeout(() => {
-    utils.addNewClass(about, 'about__background');
-  }, 800);
-
   const allParagraphs = document.querySelectorAll('.about__p');
   allParagraphs.forEach((el, key) => {
     setTimeout(() => {

@@ -83,17 +83,20 @@ export function removeChildren(parent, ...arg) {
         parent.removeChild(el);
       }
     });
-    // while (parent.firstChild) {
-    //   if(ar.length  < 0 && parent.firstChild.className != arg[0])
-    //   parent.removeChild(parent.firstChild);
-    // }
   }
 }
 export function removeScreen(parent, newClass, newSectionParentClass) {
-  addNewClass(parent.firstChild, newClass);
-  setTimeout(() => {
-    removeChildren(parent, newSectionParentClass);
-  }, 1100);
+  if (
+    !parent.firstChild ||
+    parent.firstChild == document.querySelector(newSectionParentClass)
+  ) {
+    return;
+  } else {
+    addNewClass(parent.firstChild, newClass);
+    setTimeout(() => {
+      removeChildren(parent, newSectionParentClass);
+    }, 1100);
+  }
 }
 //add remove classes
 export function addNewClass(el, newClass) {

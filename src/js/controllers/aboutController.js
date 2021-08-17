@@ -1,13 +1,13 @@
 import { about } from './../models/About';
 import * as aboutView from './../views/aboutView';
 export function renderAbout(container) {
-  function renderAbout() {
+  function renderContent() {
     return new Promise(function (resolve, reject) {
       resolve();
       reject();
     });
   }
-  renderAbout()
+  renderContent()
     .then(function () {
       aboutView.removePreviousScreen(container);
     })
@@ -17,5 +17,5 @@ export function renderAbout(container) {
       }, 1100);
     })
     .catch();
-  renderAbout();
+  renderContent();
 }

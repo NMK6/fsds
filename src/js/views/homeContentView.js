@@ -1,17 +1,20 @@
 import * as utils from './utils';
 import { elements } from './base';
+export function removePreviousScreen(container) {
+  utils.removeScreen(container, 'change-link', 'main__content-container');
+}
 export function addMarkup(arr, container) {
   utils.removeChildren(container);
-  // const blockContainer = utils.createNewElement(
-  //   'div',
-  //   'main__container',
-  //   container
-  // );
+
   const contentContainer = utils.createNewElement(
     'div',
     'main__content-container',
     container
   );
+  setTimeout(() => {
+    utils.addNewClass(contentContainer, 'main__background');
+  }, 300);
+
   const titleContainer = utils.createNewElement(
     'div',
     'main__title-container',
