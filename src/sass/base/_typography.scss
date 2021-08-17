@@ -65,7 +65,8 @@ a {
   color: rgba($light-primary, 0.6);
   font-size: 1.1rem;
 }
-.about__title {
+.about__title,
+.contact__title {
   color: $blue-color;
   font-size: 4rem;
   font-family: 'aclonicaregular';

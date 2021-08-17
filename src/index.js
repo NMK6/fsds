@@ -5,6 +5,7 @@ import { renderHeader } from './js/controllers/headerController';
 import { renderMap } from './js/controllers/mapController';
 import { renderFooter } from './js/controllers/footerController';
 import { renderAbout } from './js/controllers/aboutController';
+import { renderContact } from './js/controllers/contactController';
 
 function render() {
   window.addEventListener('DOMContentLoaded', (e) => {
@@ -33,14 +34,19 @@ function render() {
           renderAbout(containers[0]);
 
           break;
+        case 'Contact':
+          renderContact(containers[0]);
+
+          break;
 
         default:
+          renderHomeContent(containers[0]);
           break;
       }
     }
     renderHeader(renderSection);
     const containers = renderHome();
- 
+
     renderHomeSection();
   });
 }

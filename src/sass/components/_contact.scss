@@ -1,0 +1,48 @@
+.contact {
+  @include display-flex;
+  width: 100%;
+  &__container {
+    width: 100%;
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-size: 5%;
+
+    height: 100%;
+    min-height: 40rem;
+    background-position: 0 0;
+    align-items: flex-start;
+  }
+  &__title-container {
+    width: 100%;
+    @include display-flex;
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+  &__title {
+    z-index: 2;
+  }
+  &__img-container {
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-name: come-from-left;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    position: absolute;
+  }
+  &__img {
+    position: absolute;
+    top: -1.35rem;
+    left: -2.2rem;
+    z-index: -1;
+  }
+  &__background {
+    background-image: url(./../img/van-back.svg);
+    background-size: 30%;
+    background-position: 0px 50px;
+    background-repeat: no-repeat;
+    transition: all 3s ease;
+  }
+}
