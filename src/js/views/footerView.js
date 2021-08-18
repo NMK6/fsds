@@ -9,4 +9,9 @@ export function addMarkup(arr) {
   );
   const paragraph = `${arr.copyright} ${arr.year} ${arr.paragraph}`;
   utils.createNewElement('p', 'footer__p', contentContainer, paragraph);
+  const contacts = utils.createNewElement(
+    'div',
+    'footer__contacts',
+    contentContainer
+  );
 }

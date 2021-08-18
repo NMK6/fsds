@@ -5,3 +5,5 @@
 <img src='./first-screen-pop-up.png' width="800" alt='pop up'>
 <h2>First screen title</h2>
 <img src='./first-screen.png' width="800" alt='first screen design'>
+<h2>Composition</h2>
+<img src='./fsds-design.gif' width="800" alt='first screen composition'>

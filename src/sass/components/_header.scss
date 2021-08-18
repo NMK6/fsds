@@ -45,3 +45,36 @@ a.header__img-a {
   z-index: 4;
   padding: 0.5rem;
 }
+@media only screen and (max-width: 800px) {
+  .header {
+    &__nav {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 2.7rem;
+        height: 3px;
+        background-color: $blue-color;
+        box-shadow: 0 10px 0px $blue-color, 0 20px 0px $blue-color;
+        top: -0.76rem;
+      }
+    }
+    &__img-a {
+      display: none;
+    }
+    &__ul {
+      display: none;
+      flex-direction: column;
+      background-color: $blue-color;
+      width: auto;
+      padding: 2rem;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header {
+    &__container {
+      padding: 2rem 4rem;
+    }
+  }
+}
