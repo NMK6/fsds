@@ -28,4 +28,5 @@ export function addMarkup(arr, container) {
   
   `;
   titleContainer.insertAdjacentHTML('beforeend', img);
+  utils.createForm(arr, contact);
 }

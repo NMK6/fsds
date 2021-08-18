@@ -72,3 +72,21 @@ a {
   font-family: 'aclonicaregular';
   text-transform: uppercase;
 }
+.contact {
+  &__input,
+  &__textarea {
+    font-size: 1.4rem;
+    font-family: system-ui, 'open_sansregular';
+    line-height: 1.5;
+  }
+  &__button {
+    font-size: 1.4rem;
+    color: $white-color;
+    font-family: inherit;
+    line-height: inherit;
+  }
+  &__textarea::placeholder,
+  &__input::placeholder {
+    color: rgba($blue-color, 0.4);
+  }
+}

@@ -71,6 +71,11 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
     });
   }
 }
+export function createForm(arr, parent) {
+  const form = `<form class='${arr.page}__form'><label class='${arr.page}__label visually-hidden' for="fname">First name:</label><br><input class='${arr.page}__input ' type="text" id="fname" name="fname" placeholder="Name"><br>
+  <label class='${arr.page}__label visually-hidden' for="email">Last name:</label><br><input class='${arr.page}__input' type="text" id="email" name="email" placeholder="Email"><br> <label class='${arr.page}__label visually-hidden' for="Message">Your message</label><br><textarea class='${arr.page}__textarea' placeholder='Message' id="message" name="message" rows="1" maxlength="3000" required></textarea><br><button class='${arr.page}__button' type="submit">Contact me</button></form>`;
+  parent.insertAdjacentHTML('beforeend', form);
+}
 //removing
 export function removeChildren(parent, ...arg) {
   if (parent && parent.firstChild) {

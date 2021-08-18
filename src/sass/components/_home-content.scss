@@ -49,6 +49,7 @@
     display: inline-block;
     animation-name: come-from-right-behind;
     animation-duration: 1s;
+    margin-bottom: 5rem;
     animation-timing-function: ease;
     animation-delay: 1.5s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -72,6 +73,9 @@
       transform: none;
       justify-content: center;
       min-height: 40rem;
+    }
+    &__button {
+      margin-bottom: 0;
     }
   }
 }
