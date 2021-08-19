@@ -38,13 +38,25 @@ export function createSvg(
   svgI.width = iWidth;
   link.appendChild(svgI);
 }
-export function createParagraphs(parent, arr, newClass) {
-  arr.forEach((el) => {
+export function createParagraphs(
+  parent,
+  arr,
+  newClass,
+  headingClass,
+  containerClassName
+) {
+  arr.paragraphs.forEach((el, key) => {
+    const container = document.createElement('div');
+    container.className = containerClassName;
+    parent.appendChild(container);
+    const heading = document.createElement('h3');
     const p = document.createElement('p');
-
+    heading.className = headingClass;
+    heading.textContent = arr.subheadings[key];
+    container.appendChild(heading);
     p.className = newClass;
     p.textContent = el;
-    parent.appendChild(p);
+    container.appendChild(p);
   });
 }
 export function createList(parent, newClass, arr, liClass, ...arg) {

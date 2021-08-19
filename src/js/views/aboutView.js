@@ -29,8 +29,14 @@ export function addMarkup(arr, container) {
   titleContainer.insertAdjacentHTML('beforeend', img);
   const paragraphs = utils.createNewElement('div', 'about__p-container', about);
 
-  utils.createParagraphs(paragraphs, arr.paragraphs, 'about__p');
-  const allParagraphs = document.querySelectorAll('.about__p');
+  utils.createParagraphs(
+    paragraphs,
+    arr,
+    'about__p',
+    'about__subheading',
+    'about__p-containers'
+  );
+  const allParagraphs = document.querySelectorAll('.about__p-containers');
   allParagraphs.forEach((el, key) => {
     setTimeout(() => {
       utils.addNewClass(el, 'appear-from-bottom');

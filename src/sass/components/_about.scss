@@ -21,6 +21,9 @@
     padding-bottom: 1.5rem;
     position: relative;
   }
+  &__p-containers:not(:last-child) {
+    padding-bottom: 1rem;
+  }
   &__img-container {
     animation-fill-mode: forwards;
     position: relative;
@@ -36,7 +39,8 @@
     left: -2.2rem;
     z-index: -1;
   }
-  &__p {
+
+  &__p-containers {
     opacity: 0;
   }
   &__p:not(:last-child) {

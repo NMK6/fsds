@@ -72,6 +72,11 @@ a {
   font-family: 'aclonicaregular';
   text-transform: uppercase;
 }
+.about__subheading {
+  color: $blue-color;
+  font-size: 1.4rem;
+  font-family: 'aclonicaregular';
+}
 .contact {
   &__input,
   &__textarea {
