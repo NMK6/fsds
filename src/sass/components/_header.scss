@@ -49,6 +49,8 @@ a.header__img-a {
   .header {
     &__nav {
       position: relative;
+      padding-bottom: 2rem;
+      padding-right: 3rem;
       &::before {
         position: absolute;
         content: '';
@@ -56,18 +58,22 @@ a.header__img-a {
         height: 3px;
         background-color: $blue-color;
         box-shadow: 0 10px 0px $blue-color, 0 20px 0px $blue-color;
-        top: -0.76rem;
+        top: 0.2rem;
       }
     }
     &__img-a {
       display: none;
     }
     &__ul {
-      display: none;
       flex-direction: column;
       background-color: $blue-color;
       width: auto;
       padding: 2rem;
+      position: absolute;
+      top: 4rem;
+    }
+    &__li {
+      padding: 1.2rem;
     }
   }
 }

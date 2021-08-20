@@ -35,3 +35,8 @@ export function addMarkup(arr) {
   );
   return header;
 }
+export const width = elements.width;
+export function changeWidth() {
+  elements.width = window.innerWidth;
+  console.log(elements.width);
+}
