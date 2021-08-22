@@ -62,4 +62,6 @@ export function addMarkup(arr, container) {
   }
   utils.createLink(button, 'main__button-a', buttonLink, arr.button);
   utils.loopTextByLetter(arr.title, title, 'span', 'appear');
+
+  utils.addMap();
 }

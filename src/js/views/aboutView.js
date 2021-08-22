@@ -42,4 +42,5 @@ export function addMarkup(arr, container) {
       utils.addNewClass(el, 'appear-from-bottom');
     }, 400 * key);
   });
+  utils.addMap();
 }

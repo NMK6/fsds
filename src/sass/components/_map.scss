@@ -9,8 +9,9 @@
   }
   &__country-container {
     position: absolute;
-    top: 20%;
-    right: 47%;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%);
     @include display-flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
@@ -23,6 +24,7 @@
     padding: 3rem 3.5rem;
     background-color: $light-primary;
     transition: all 1s ease;
+    z-index: 6;
   }
   &__country-title {
     padding-bottom: 0.7rem;

@@ -115,6 +115,7 @@ export function removeScreen(parent, newClass, newSectionParentClass) {
     }, 1100);
   }
 }
+
 //add remove classes
 export function addNewClass(el, newClass) {
   el.classList.add(newClass);
@@ -193,3 +194,13 @@ export const managePathsLooping = (paths, pathsColor, pathsStroke) => {
     }, 9000);
   }, 12000);
 };
+export function addMap() {
+  if (document.querySelector('.contact__map-container')) {
+    addNewClass(
+      document.querySelector('.contact__map-container'),
+      'visually-hidden'
+    );
+  }
+  removeNewClass(document.querySelector('.map__container'), 'visually-hidden');
+  addNewClass(document.querySelector('.map__container'), 'animated__map');
+}

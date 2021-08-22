@@ -35,7 +35,7 @@ function render() {
 
           break;
         case 'Contact':
-          renderContact(containers[0]);
+          renderContact(containers[0], containers[1]);
 
           break;
 

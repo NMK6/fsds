@@ -1,8 +1,9 @@
 import * as utils from './utils';
-export function removePreviousScreen(container) {
+export function removePreviousScreen(container, container2) {
   utils.removeScreen(container, 'change-link', 'contact-container');
+  // utils.removeChildren(container2);
 }
-export function addMarkup(arr, container) {
+export function addMarkup(arr, container, container2) {
   const contact = utils.createNewElement(
     'div',
     'contact__container',
@@ -28,5 +29,69 @@ export function addMarkup(arr, container) {
   
   `;
   titleContainer.insertAdjacentHTML('beforeend', img);
+  function addUKMap() {
+    utils.addNewClass(container2.firstChild, 'visually-hidden');
+    if (!document.querySelector('.contact__map-container')) {
+      const ukMapContainer = utils.createNewElement(
+        'div',
+        'contact__map-container',
+        container2
+      );
+      ukMapContainer.insertAdjacentHTML('beforeend', arr.map);
+    } else {
+      utils.removeNewClass(
+        document.querySelector('.contact__map-container'),
+        'visually-hidden'
+      );
+    }
+    utils.addNewClass(
+      document.querySelector('.contact__map-container'),
+      'animated__map'
+    );
+  }
+  addUKMap();
   utils.createForm(arr, contact);
+}
+export function showPrice(e, arr, container) {
+  arr.id.forEach((el, key) => {
+    if (e.target.id == el) {
+      if (arr.id[key]) {
+        document.querySelector('.map__country-container')
+          ? utils.removeChildren(
+              document.querySelector('.map__country-container')
+            )
+          : utils.createNewElement('div', 'map__country-container', container);
+        const popUpTitle = `FSDS prices`;
+
+        const popUpParagraph = `City: ${arr.city[key]}`;
+        const popUpSecondParagraph = `Price from Southend-on-sea to ${arr.city[key]}`;
+        const popUpContent = utils.createNewElement(
+          'div',
+          'map__country-content',
+          document.querySelector('.map__country-container')
+        );
+        utils.createNewElement(
+          'h3',
+          'map__country-title',
+          popUpContent,
+          popUpTitle
+        );
+        utils.createNewElement(
+          'p',
+          'map__country-p',
+          popUpContent,
+          popUpParagraph
+        );
+        utils.createNewElement(
+          'p',
+          'map__country-p',
+          popUpContent,
+          popUpSecondParagraph
+        );
+      }
+    }
+  });
+}
+export function hidePrice() {
+  utils.removeChildren(document.querySelector('.map__country-container'));
 }
