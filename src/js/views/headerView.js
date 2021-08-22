@@ -10,6 +10,7 @@ export function addMarkup(arr) {
     elements.root
   );
   const menu = utils.createNewElement('nav', 'header__nav', header);
+
   const menuContent = utils.createList(
     menu,
     'header__ul',
@@ -33,10 +34,40 @@ export function addMarkup(arr) {
     'header__logo-a',
     '/'
   );
+
   return header;
 }
-export const width = elements.width;
-export function changeWidth() {
-  elements.width = window.innerWidth;
-  console.log(elements.width);
+export let wWidth = elements.width;
+export function addMobMenu(nav) {
+  utils.addNewClass(nav, 'visually-hidden');
+  // utils.removeNewClass(ul.firstChild, 'change-scale-y');
+  // const lis = ul.firstChild.childNodes;
+  // lis.forEach((el) => {
+  //   utils.removeNewClass(el, 'apear-from-bottom-opacity-not-one');
+  // });
+  // utils.removeNewClass(nav.parentNode, 'header__click');
+}
+
+export function removeMobMenu(nav, ul) {
+  utils.removeNewClass(nav, 'visually-hidden');
+  utils.removeNewClass(nav.parentNode, 'header__click');
+  utils.removeNewClass(ul.firstChild, 'change-scale-y');
+  const lis = ul.firstChild.childNodes;
+  lis.forEach((el) => {
+    utils.removeNewClass(el, 'apear-from-bottom-opacity-not-one');
+  });
+}
+export function dealWithMobMenuClicks(nav, ul) {
+  nav.classList.toggle('visually-hidden');
+  ul.firstChild.classList.toggle('change-scale-y');
+  const lis = ul.firstChild.childNodes;
+  setTimeout(() => {
+    lis.forEach((el, key) => {
+      setTimeout(() => {
+        el.classList.toggle('apear-from-bottom-opacity-not-one');
+      }, 200 * key);
+    });
+  }, 500);
+
+  nav.parentNode.classList.toggle('header__click');
 }

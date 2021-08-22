@@ -32,6 +32,19 @@
     transform: translateY(0) scale(1);
   }
 }
+@keyframes appear-from-bottom-still-zero {
+  0% {
+    transform: translateY(40px) scale(1.2);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+}
 @keyframes change-opacity {
   0% {
     opacity: 0;
@@ -85,5 +98,15 @@
   100% {
     transform: translate(-150px 0);
     opacity: 0;
+  }
+}
+@keyframes scale-from-zero-to-one {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }

@@ -12,13 +12,35 @@ export function renderHeader(fun) {
       return;
     }
   });
-
-  window.addEventListener('resize', headerView.changeWidth);
-  if (headerView.width <= 800) {
-    headerNav.classList.add('visually-hidden');
-    headerMob.addEventListener('click', function (e) {
-      headerNav.classList.toggle('visually-hidden');
-      console.log(headerNav);
-    });
+  // function doNothing() {
+  //   return;
+  // }
+  function dealWithMobMenuClicks() {
+    headerView.wWidth <= 800
+      ? headerView.dealWithMobMenuClicks(headerNav, headerMob)
+      : false;
   }
+
+  function checkWidth(currentWidth) {
+    if (currentWidth <= 800) {
+      headerView.addMobMenu(headerNav);
+      headerMob.addEventListener('click', dealWithMobMenuClicks);
+
+      return true;
+    } else {
+      headerView.removeMobMenu(headerNav, headerMob);
+      return false;
+    }
+  }
+
+  checkWidth(headerView.wWidth);
+
+  function addMobMenuOnResize() {
+    setTimeout(() => {
+      headerView.wWidth = window.innerWidth;
+
+      checkWidth(headerView.wWidth);
+    }, 900);
+  }
+  window.addEventListener('resize', addMobMenuOnResize);
 }

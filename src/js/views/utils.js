@@ -119,6 +119,11 @@ export function removeScreen(parent, newClass, newSectionParentClass) {
 export function addNewClass(el, newClass) {
   el.classList.add(newClass);
 }
+export function removeNewClass(el, newClass) {
+  if (el.classList.contains(newClass)) {
+    el.classList.remove(newClass);
+  }
+}
 //looping
 export function loopTextByLetter(arr, element, crEl, newClass) {
   const l = arr.length;

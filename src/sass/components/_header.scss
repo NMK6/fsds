@@ -57,8 +57,32 @@ a.header__img-a {
         width: 2.7rem;
         height: 3px;
         background-color: $blue-color;
-        box-shadow: 0 10px 0px $blue-color, 0 20px 0px $blue-color;
-        top: 0.2rem;
+        box-shadow: 0 10px 0px $blue-color, 0 -10px 0px $blue-color;
+        top: 0.8rem;
+        transition: all 0.5s ease;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        width: 2.7rem;
+        height: 3px;
+        background-color: transparent;
+        top: 0.8rem;
+        transition: all 0.5s ease;
+      }
+    }
+    &__click {
+      &::before {
+        background-color: $primary-color;
+        box-shadow: none;
+        transform: rotate(45deg);
+        z-index: 30;
+      }
+      &::after {
+        background-color: $primary-color;
+        transform: rotate(-45deg);
+        transition: all 0.5s ease;
+        z-index: 30;
       }
     }
     &__img-a {
@@ -66,14 +90,27 @@ a.header__img-a {
     }
     &__ul {
       flex-direction: column;
+      align-items: flex-start;
       background-color: $blue-color;
-      width: auto;
-      padding: 2rem;
+
+      padding-left: 7rem;
       position: absolute;
-      top: 4rem;
+      top: -4rem;
+      left: -7.5rem;
+      width: 100vw;
+      height: 100vh;
+      z-index: 20;
+      transform: scaleY(0);
+      opacity: 0;
+      justify-content: center;
+      background-image: url('./../img/van-white.svg');
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: 130px 140px;
     }
     &__li {
-      padding: 1.2rem;
+      padding: 1rem;
+      opacity: 0;
     }
   }
 }
@@ -81,6 +118,11 @@ a.header__img-a {
   .header {
     &__container {
       padding: 2rem 4rem;
+    }
+    &__ul {
+      padding-left: 4rem;
+      background-position: 80px 160px;
+      left: -4rem;
     }
   }
 }

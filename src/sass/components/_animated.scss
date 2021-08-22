@@ -47,3 +47,19 @@
 
   animation-fill-mode: forwards;
 }
+.apear-from-bottom-opacity-not-one {
+  display: inline-block;
+  animation-name: appear-from-bottom-still-zero;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+
+  animation-fill-mode: forwards;
+}
+.change-scale-y {
+  animation-name: scale-from-zero-to-one;
+
+  transform-origin: top;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
