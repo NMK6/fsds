@@ -12,9 +12,7 @@ export function renderHeader(fun) {
       return;
     }
   });
-  // function doNothing() {
-  //   return;
-  // }
+
   function dealWithMobMenuClicks() {
     headerView.wWidth <= 800
       ? headerView.dealWithMobMenuClicks(headerNav, headerMob)

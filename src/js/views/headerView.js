@@ -10,7 +10,6 @@ export function addMarkup(arr) {
     elements.root
   );
   const menu = utils.createNewElement('nav', 'header__nav', header);
-
   const menuContent = utils.createList(
     menu,
     'header__ul',
@@ -25,15 +24,17 @@ export function addMarkup(arr) {
     'header__img-a',
     arr.imgLinks
   );
-  const logo = utils.createSvg(
-    'header__logo',
-    header,
-    'logo',
-    arr.myLogo,
-    90,
-    'header__logo-a',
-    '/'
-  );
+  setTimeout(() => {
+    const logo = utils.createSvg(
+      'header__logo',
+      header,
+      'logo',
+      arr.myLogo,
+      90,
+      'header__logo-a',
+      '/'
+    );
+  }, 100);
 
   return header;
 }

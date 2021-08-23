@@ -10,7 +10,7 @@
   &__country-container {
     position: absolute;
     top: 50%;
-    left: 7.5rem;
+    left: 30%;
 
     @include display-flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -137,7 +137,7 @@
 @media only screen and (max-width: 700px) {
   .map {
     &__country-container {
-      top: -7rem;
+      top: -12rem;
     }
   }
 }

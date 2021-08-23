@@ -18,9 +18,15 @@ function render() {
     renderHomeSection()
       .then(function () {
         renderHomeContent(containers[0]);
-        renderMap(containers[1]);
+        setTimeout(() => {
+          renderMap(containers[1]);
+        }, 1000);
       })
-      .then(renderFooter)
+      .then(function () {
+        setTimeout(() => {
+          renderFooter();
+        }, 4000);
+      })
       .catch();
 
     function renderSection(e) {

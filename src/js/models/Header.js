@@ -4,10 +4,12 @@ import phone from './../../img/phone.svg';
 import email from './../../img/email.svg';
 export const header = {
   menu: ['Home', 'About', 'Contact'],
-  links: ['', '#about', '#contact'],
+  links: ['/', '#about', '#contact'],
+  title: ['FSDS', 'About delivery services FSDS', 'Contact delivery services'],
   myLogo: logo,
   favicon: fav,
   contacts: [phone, email],
   alts: ['phone', 'email'],
   imgLinks: ['tel:+447927296639', 'mailto:fsdsprint@gmail.com'],
+  imgTitle: ['phone a courier', 'email a courier'],
 };

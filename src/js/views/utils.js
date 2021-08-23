@@ -31,12 +31,14 @@ export function createSvg(
   newHref
 ) {
   const link = createLink(parent, newLinkClass, newHref);
-  const svgI = document.createElement('img');
-  svgI.alt = newAlt;
-  svgI.src = newLink;
-  svgI.className = newClass;
-  svgI.width = iWidth;
-  link.appendChild(svgI);
+  setTimeout(() => {
+    const svgI = document.createElement('img');
+    svgI.alt = newAlt;
+    svgI.src = newLink;
+    svgI.className = newClass;
+    svgI.width = iWidth;
+    link.appendChild(svgI);
+  }, 100);
 }
 export function createParagraphs(
   parent,
@@ -84,8 +86,7 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
   }
 }
 export function createForm(arr, parent) {
-  const form = `<form class='${arr.page}__form'><label class='${arr.page}__label visually-hidden' for="fname">First name:</label><br><input class='${arr.page}__input ' type="text" id="fname" name="fname" placeholder="Name"><br>
-  <label class='${arr.page}__label visually-hidden' for="email">Last name:</label><br><input class='${arr.page}__input' type="text" id="email" name="email" placeholder="Email"><br> <label class='${arr.page}__label visually-hidden' for="Message">Your message</label><br><textarea class='${arr.page}__textarea' placeholder='Message' id="message" name="message" rows="1" maxlength="3000" required></textarea><br><button class='${arr.page}__button' type="submit">Contact me</button></form>`;
+  const form = `<form class='${arr.page}__form' action="https://mailto:fsdsprint@gmail.com" method="post"><label class='${arr.page}__label visually-hidden' for="fname">First name:</label><br><input class='${arr.page}__input ' type="text" id="fname" name="fname" placeholder="Name" pattern="[a-za-zA-Z]{2,15}" required ><br><label class='${arr.page}__label visually-hidden' for="email">Last name:</label><br><input class='${arr.page}__input' type="text" id="email" name="email" placeholder="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{1,63}$" required><br> <label class='${arr.page}__label visually-hidden' for="Message">Your message</label><br><textarea class='${arr.page}__textarea' placeholder='Message' id="message" name="message" rows="1" maxlength="3000" required></textarea><br><button class='${arr.page}__button' type="submit"><a href="mailto: fsdsprint@gmail.com" class="main__button-a">Contact me</a></button></form>`;
   parent.insertAdjacentHTML('beforeend', form);
 }
 //removing

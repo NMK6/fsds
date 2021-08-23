@@ -31,6 +31,7 @@ export function addMarkup(arr, container, container2) {
   titleContainer.insertAdjacentHTML('beforeend', img);
   function addUKMap() {
     utils.addNewClass(container2.firstChild, 'visually-hidden');
+    utils.removeNewClass(container2.firstChild, 'animated__map');
     if (!document.querySelector('.contact__map-container')) {
       const ukMapContainer = utils.createNewElement(
         'div',

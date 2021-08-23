@@ -138,5 +138,8 @@ a.header__img-a {
       left: -3rem;
       padding-left: 3rem;
     }
+    &__nav::before, &__nav::after {
+      height: 2px;
+    }
   }
 }
