@@ -10,9 +10,9 @@
     flex-direction: column;
     width: 50%;
     height: auto;
-    &:last-child {
-      position: relative;
-    }
+    // &:last-child {
+    //   position: relative;
+    // }
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -37,6 +37,16 @@
 
     &__half:first-child {
       padding-right: 4rem;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .home {
+    padding-left: 3rem;
+    &__half {
+      &:first-child {
+        padding-right: 3rem;
+      }
     }
   }
 }

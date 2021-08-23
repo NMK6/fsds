@@ -22,7 +22,7 @@ export function renderContact(container, container2) {
     document
       .querySelector('.contact__map')
       .addEventListener('mouseover', function (e) {
-        contactView.showPrice(e, contact, container);
+        contactView.showPrice(e, contact);
       });
     document
       .querySelector('.contact__map')

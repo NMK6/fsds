@@ -1,7 +1,7 @@
 import * as utils from './utils';
-export function removePreviousScreen(container, container2) {
+import { elements } from './base';
+export function removePreviousScreen(container) {
   utils.removeScreen(container, 'change-link', 'contact-container');
-  // utils.removeChildren(container2);
 }
 export function addMarkup(arr, container, container2) {
   const contact = utils.createNewElement(
@@ -52,7 +52,7 @@ export function addMarkup(arr, container, container2) {
   addUKMap();
   utils.createForm(arr, contact);
 }
-export function showPrice(e, arr, container) {
+export function showPrice(e, arr) {
   arr.id.forEach((el, key) => {
     if (e.target.id == el) {
       if (arr.id[key]) {
@@ -60,7 +60,11 @@ export function showPrice(e, arr, container) {
           ? utils.removeChildren(
               document.querySelector('.map__country-container')
             )
-          : utils.createNewElement('div', 'map__country-container', container);
+          : utils.createNewElement(
+              'div',
+              'map__country-container',
+              document.querySelector('.map')
+            );
         const popUpTitle = `FSDS prices`;
 
         const popUpParagraph = `City: ${arr.city[key]}`;

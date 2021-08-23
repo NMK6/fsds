@@ -1,5 +1,4 @@
 .main {
-
   width: 100%;
   &__content-container {
     @include display-flex;
@@ -79,5 +78,34 @@
     }
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 490px) {
+  .main {
+    &__content-container {
+      min-height: 25rem;
+    }
+    &__img {
+      left: -1.3rem;
+      top: -2.7rem;
+      width: 27.5px;
+    }
+    &__main-p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .main {
+    // padding-left: 3rem;
+    &__p {
+      margin-bottom: 1.5rem;
+    }
+    &__img {
+      left: -1rem;
+      top: -1.75rem;
+      width: 18px;
+    }
+    &__content-container {
+      min-height: 20rem;
+    }
+  }
 }

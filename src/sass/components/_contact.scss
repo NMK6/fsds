@@ -107,17 +107,14 @@
     margin-top: -8rem;
     opacity: 0;
   }
-  &__map {
-    height: auto;
-  }
 }
 
 @media only screen and (max-width: 1300px) {
   .contact {
-    &__map-container {
-      margin-left: 0;
-      padding-right: 19rem;
-    }
+    // &__map-container {
+    //   margin-left: 0;
+    //   padding-right: 19rem;
+    // }
   }
   #scotland-left,
   #scotland-right {
@@ -129,6 +126,9 @@
     &__form {
       width: 100%;
     }
+    &__map {
+      height: auto;
+    }
     &__map-container {
       padding-right: 7rem;
       margin-top: 0;
@@ -138,5 +138,61 @@
 
   #scotland-right {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contact {
+    &__map-container {
+      padding-right: 4rem;
+    }
+  }
+}
+@media only screen and (max-width: 490px) {
+  .contact {
+    &__img {
+      left: -1.9rem;
+
+      top: -1.2rem;
+
+      width: 34px;
+    }
+    &__button {
+      margin-top: 4.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .contact {
+    &__img {
+      left: -1.9rem;
+
+      top: -1.2rem;
+
+      width: 34px;
+    }
+    &__button {
+      margin-top: 4.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .contact {
+    &__img {
+      left: -1.3rem;
+      top: -0.8rem;
+      width: 25px;
+    }
+    &__container {
+      min-height: 20rem;
+    }
+    &__map-container {
+      padding-top: 2rem;
+    }
+    &__form::before {
+      top: 11.4rem;
+    }
+    &__button {
+      margin-top: 4rem;
+    }
   }
 }

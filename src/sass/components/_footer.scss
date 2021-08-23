@@ -12,3 +12,12 @@
     padding-bottom: 0.5rem;
   }
 }
+@media only screen and (max-width: 800px) {
+  .footer {
+    &__container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+}
+

@@ -21,6 +21,9 @@
     padding-bottom: 1.5rem;
     position: relative;
   }
+  &__title {
+    z-index: 1;
+  }
   &__p-containers:not(:last-child) {
     padding-bottom: 1rem;
   }
@@ -59,6 +62,29 @@
     &__container {
       justify-content: center;
       padding-right: 0rem;
+    }
+  }
+}
+@media only screen and (max-width: 490px) {
+  .about {
+    &__img {
+      left: -1.7rem;
+
+      top: -1.2rem;
+
+      width: 32.5px;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .about {
+    &__img {
+      left: -1.2rem;
+      top: -0.9rem;
+      width: 23px;
+    }
+    &__container {
+      background-position: 60px 0px;
     }
   }
 }

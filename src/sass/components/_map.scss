@@ -10,8 +10,8 @@
   &__country-container {
     position: absolute;
     top: 50%;
-    right: 50%;
-    transform: translate(-50%);
+    left: 7.5rem;
+
     @include display-flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
@@ -124,4 +124,20 @@
 #l-l-4 {
   fill: transparent;
   opacity: 0;
+}
+@media only screen and (max-width: 1100px) {
+  .map {
+    position: relative;
+    &__country-container {
+      left: 0;
+      width: 20rem;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .map {
+    &__country-container {
+      top: -7rem;
+    }
+  }
 }

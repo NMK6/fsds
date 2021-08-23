@@ -126,3 +126,17 @@ a.header__img-a {
     }
   }
 }
+@media only screen and (max-width: 345px) {
+  .header {
+    &__logo {
+      width: 4rem;
+    }
+    &__container {
+      padding: 2rem 3rem;
+    }
+    &__ul {
+      left: -3rem;
+      padding-left: 3rem;
+    }
+  }
+}
