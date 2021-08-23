@@ -55,11 +55,9 @@ export function addMarkup(arr, container) {
     'button'
   );
   let buttonLink;
-  if (elements.width <= 700) {
-    buttonLink = arr.buttonMobileLink;
-  } else {
-    buttonLink = arr.buttonLink;
-  }
+
+  buttonLink = arr.buttonMobileLink;
+
   utils.createLink(button, 'main__button-a', buttonLink, arr.button);
 
   utils.loopTextByLetter(arr.title, title, 'span', 'appear');
