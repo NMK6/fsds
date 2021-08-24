@@ -45,10 +45,10 @@ export function showPrice(e, arr) {
               'map__country-container',
               document.querySelector('.map')
             );
-        const popUpTitle = `FSDS prices`;
+        const popUpTitle = `FSDS' delivery area`;
 
         const popUpParagraph = `Country: ${arr.title[key]}`;
-        const popUpSecondParagraph = `Price from England to ${arr.capitalCity[key]}: ${arr.price[key]} per mile`;
+        const popUpSecondParagraph = `${arr.zone[key]} goods to ${arr.capitalCity[key]}`;
         const popUpContent = utils.createNewElement(
           'div',
           'map__country-content',

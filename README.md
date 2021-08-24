@@ -7,3 +7,7 @@
 <img src='./first-screen.png' width="800" alt='first screen design'>
 <h2>Composition</h2>
 <img src='./fsds-design.gif' width="800" alt='first screen composition'>
+<h2>Contact</h2>
+<img src='./fsds-contact.png' width="800" alt='contact'>
+<h2>Progress</h2>
+<img src='./fsds-progress.gif' width="800" alt='progress'>
