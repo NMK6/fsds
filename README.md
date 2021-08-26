@@ -1,4 +1,4 @@
-<h1>Project for delivery services</h1>
+<h1>Project for delivery services (JavaScript, SCSS, HTML</h1>
 <h2>First screen pop up</h2>
 <img src='./fsds.gif' width="800" alt='animation'>
 <h2>First screen path</h2>
@@ -10,4 +10,9 @@
 <h2>Contact</h2>
 <img src='./fsds-contact.png' width="800" alt='contact'>
 <h2>Progress</h2>
+
 <img src='./fsds-progress.gif' width="800" alt='progress'>
+<p>Fixed width of info</p>
+<img src='./fsds-progress-2.gif' width="800" alt='progress'>
+<h2>Responsive design</h2>
+<img src='./fsds-phone.gif' width="800" alt='progress'>
