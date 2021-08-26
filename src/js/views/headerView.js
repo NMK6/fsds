@@ -41,12 +41,6 @@ export function addMarkup(arr) {
 export let wWidth = elements.width;
 export function addMobMenu(nav) {
   utils.addNewClass(nav, 'visually-hidden');
-  // utils.removeNewClass(ul.firstChild, 'change-scale-y');
-  // const lis = ul.firstChild.childNodes;
-  // lis.forEach((el) => {
-  //   utils.removeNewClass(el, 'apear-from-bottom-opacity-not-one');
-  // });
-  // utils.removeNewClass(nav.parentNode, 'header__click');
 }
 
 export function removeMobMenu(nav, ul) {

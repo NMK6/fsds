@@ -6,6 +6,7 @@ export function renderHeader(fun) {
   const headerMob = headerContainer.firstChild;
   headerNav.addEventListener('click', function (e) {
     e.preventDefault();
+
     if (e.target.classList.contains('header__a')) {
       fun(e);
     } else {
@@ -13,7 +14,7 @@ export function renderHeader(fun) {
     }
   });
 
-  function dealWithMobMenuClicks() {
+  function dealWithMobMenuClicks(e) {
     headerView.wWidth <= 800
       ? headerView.dealWithMobMenuClicks(headerNav, headerMob)
       : false;
