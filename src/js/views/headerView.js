@@ -30,7 +30,7 @@ export function addMarkup(arr) {
       header,
       'logo',
       arr.myLogo,
-      90,
+      60,
       'header__logo-a',
       '/'
     );

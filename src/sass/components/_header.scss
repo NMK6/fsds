@@ -9,7 +9,7 @@
     @include display-flex;
   }
   &__logo {
-    width: 90px;
+    width: 60px;
   }
   &__ul {
     @include display-flex;
@@ -119,6 +119,9 @@ a.header__img-a {
     &__container {
       padding: 2rem 4rem;
     }
+    &__logo {
+      width: 3.5rem;
+    }
     &__ul {
       padding-left: 4rem;
       background-position: 80px 160px;
@@ -128,9 +131,6 @@ a.header__img-a {
 }
 @media only screen and (max-width: 345px) {
   .header {
-    &__logo {
-      width: 4rem;
-    }
     &__container {
       padding: 2rem 3rem;
     }
@@ -138,7 +138,8 @@ a.header__img-a {
       left: -3rem;
       padding-left: 3rem;
     }
-    &__nav::before, &__nav::after {
+    &__nav::before,
+    &__nav::after {
       height: 2px;
     }
   }

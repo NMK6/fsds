@@ -33,6 +33,7 @@ export function addMarkup(arr, container) {
   return europe;
 }
 export function showPrice(e, arr) {
+  const popUpTitle = `FSDS' delivery area`;
   arr.id.forEach((el, key) => {
     if (e.target.id == el) {
       if (arr.title[key]) {
@@ -45,10 +46,28 @@ export function showPrice(e, arr) {
               'map__country-container',
               document.querySelector('.map')
             );
-        const popUpTitle = `FSDS' delivery area`;
 
         const popUpParagraph = `Country: ${arr.title[key]}`;
-        const popUpSecondParagraph = `${arr.zone[key]} goods to ${arr.capitalCity[key]}`;
+        function findZone() {
+          if (
+            key == 1 ||
+            key == 4 ||
+            key == 6 ||
+            key == 8 ||
+            key == 13 ||
+            key == 15 ||
+            key == 19 ||
+            key == 21 ||
+            key == 26 ||
+            key == 27
+          ) {
+            return arr.zone[0];
+          } else {
+            return arr.zone[1];
+          }
+        }
+        const zone = findZone();
+        const popUpSecondParagraph = `${zone} goods to ${arr.capitalCity[key]}`;
         const popUpContent = utils.createNewElement(
           'div',
           'map__country-content',
