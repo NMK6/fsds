@@ -23,9 +23,9 @@ export function renderContact(container, container2) {
       .querySelector('.contact__map')
       .addEventListener('mouseover', function (e) {
         contactView.showPrice(e, contact);
-      });
+      }, {passive: true});
     document
       .querySelector('.contact__map')
-      .addEventListener('mouseout', contactView.hidePrice);
+      .addEventListener('mouseout', contactView.hidePrice, {passive: true});
   }, 5000);
 }

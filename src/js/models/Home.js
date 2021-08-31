@@ -5,6 +5,6 @@ export const home = {
   button: 'Contact me',
 
   buttonMobileLink:
-    'https://api.whatsapp.com/send?phone=+447927296639&text=Hi Gunars,',
+    'https://api.whatsapp.com/send?phone=+447427669193&text=Hi FSDS,',
   buttonLink: 'mailto:fsdsprint@gmail.com',
 };

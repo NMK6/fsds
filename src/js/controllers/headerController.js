@@ -23,7 +23,7 @@ export function renderHeader(fun) {
   function checkWidth(currentWidth) {
     if (currentWidth <= 800) {
       headerView.addMobMenu(headerNav);
-      headerMob.addEventListener('click', dealWithMobMenuClicks);
+      headerMob.addEventListener('click', dealWithMobMenuClicks, {passive: true});
 
       return true;
     } else {
@@ -41,5 +41,5 @@ export function renderHeader(fun) {
       checkWidth(headerView.wWidth);
     }, 900);
   }
-  window.addEventListener('resize', addMobMenuOnResize);
+  window.addEventListener('resize', addMobMenuOnResize, {passive: true});
 }

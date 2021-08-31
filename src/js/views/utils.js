@@ -28,7 +28,8 @@ export function createSvg(
   newLink,
   iWidth,
   newLinkClass,
-  newHref
+  newHref,
+  ...arg
 ) {
   const link = createLink(parent, newLinkClass, newHref);
   setTimeout(() => {
@@ -38,6 +39,9 @@ export function createSvg(
     svgI.className = newClass;
     svgI.width = iWidth;
     link.appendChild(svgI);
+    if (arg.length > 0) {
+      svgI.height = arg[0];
+    }
   }, 100);
 }
 export function createParagraphs(
@@ -81,7 +85,16 @@ export function createList(parent, newClass, arr, liClass, ...arg) {
   });
   if (arg.length > 2) {
     arg[2].forEach((el, key) => {
-      createSvg(arg[3], parent, arg[4][key], el, arg[5], arg[6], arg[7][key]);
+      createSvg(
+        arg[3],
+        parent,
+        arg[4][key],
+        el,
+        arg[5],
+        arg[6],
+        arg[7][key],
+        18
+      );
     });
   }
 }

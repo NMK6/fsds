@@ -10,6 +10,6 @@ export const header = {
   favicon: fav,
   contacts: [phone, email],
   alts: ['phone', 'email'],
-  imgLinks: ['tel:+447927296639', 'mailto:fsdsprint@gmail.com'],
+  imgLinks: ['tel:+447427669193', 'mailto:fsdsprint@gmail.com'],
   imgTitle: ['phone a courier', 'email a courier'],
 };

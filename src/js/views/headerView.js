@@ -32,7 +32,8 @@ export function addMarkup(arr) {
       arr.myLogo,
       60,
       'header__logo-a',
-      '/'
+      '/',
+      53.05
     );
   }, 100);
 
