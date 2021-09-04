@@ -1,18 +1,18 @@
 import { header } from './../models/Header';
 import * as headerView from './../views/headerView';
-export function renderHeader(fun) {
+export function renderHeader() {
   const headerContainer = headerView.addMarkup(header);
   const headerNav = headerContainer.firstChild.firstChild;
   const headerMob = headerContainer.firstChild;
-  headerNav.addEventListener('click', function (e) {
-    e.preventDefault();
+  // headerNav.addEventListener('click', function (e) {
+  //   e.preventDefault();
 
-    if (e.target.classList.contains('header__a')) {
-      fun(e);
-    } else {
-      return;
-    }
-  });
+  //   if (e.target.classList.contains('header__a')) {
+  //     fun(e);
+  //   } else {
+  //     return;
+  //   }
+  // });
 
   function dealWithMobMenuClicks(e) {
     headerView.wWidth <= 800

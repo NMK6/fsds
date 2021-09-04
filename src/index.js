@@ -17,7 +17,8 @@ function render() {
     }
     renderHomeSection()
       .then(function () {
-        renderHomeContent(containers[0]);
+        // renderHomeContent(containers[0]);
+        renderLocation();
         setTimeout(() => {
           renderMap(containers[1]);
         }, 1000);
@@ -29,31 +30,50 @@ function render() {
       })
       .catch();
 
-    function renderSection(e) {
-      const section = e.target.textContent;
-      switch (section) {
-        case 'Home':
-          renderHomeContent(containers[0]);
+    // function renderSection(e) {
+    //   const section = e.target.textContent;
+    //   switch (section) {
+    //     case 'Home':
+    //       renderHomeContent(containers[0]);
 
-          break;
-        case 'About':
-          renderAbout(containers[0]);
+    //       break;
+    //     case 'About':
+    //       renderAbout(containers[0]);
 
-          break;
-        case 'Contact':
-          renderContact(containers[0], containers[1]);
+    //       break;
+    //     case 'Contact':
+    //       renderContact(containers[0], containers[1]);
 
-          break;
+    //       break;
 
-        default:
-          renderHomeContent(containers[0]);
-          break;
-      }
-    }
-    renderHeader(renderSection);
+    //     default:
+    //       renderHomeContent(containers[0]);
+    //       break;
+    //   }
+    // }
+    // renderHeader(renderSection);
+        renderHeader();
     const containers = renderHome();
 
     renderHomeSection();
+    function renderLocation() {
+
+if(document.location.hash == '#about') {
+
+      renderAbout(containers[0]);
+    } else if(document.location.hash == '#contact')  {
+      renderContact(containers[0], containers[1]);
+
+
+      }else {
+      renderHomeContent(containers[0]);
+    }
+    
+  
+    }
+
+    window.addEventListener("hashchange", renderLocation);
   });
+  
 }
 render();
